@@ -1,0 +1,49 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter', sans-serif; background:#000; color:#fff; }
+
+/* Nav */
+header {
+  position:fixed; top:0; left:0; right:0;
+  display:flex; justify-content:space-between; align-items:center;
+  padding:1rem 2rem;
+  background:rgba(0,0,0,0.7); backdrop-filter:blur(6px);
+  z-index:1000;
+}
+header .logo { font-family:'Anton', sans-serif; font-size:1.5rem; letter-spacing:2px; color:#f5c518; }
+header nav a {
+  margin-left:1.5rem; text-decoration:none; color:#fff; font-weight:500;
+  position:relative;
+}
+header nav a::after {
+  content:''; position:absolute; bottom:-4px; left:0;
+  width:0; height:2px; background:#f5c518; transition:width 0.3s ease;
+}
+header nav a:hover::after { width:100%; }
+
+/* Hero */
+.hero {
+  height:100vh; background:url('../assets/images/hero.jpg') center/cover no-repeat;
+  position:relative; display:flex; justify-content:center; align-items:center;
+  text-align:center;
+}
+.hero .overlay {
+  position:absolute; top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.6);
+}
+.hero-content { position:relative; z-index:2; }
+.hero h1 { font-family:'Anton', sans-serif; font-size:4rem; margin-bottom:1rem; color:#f5c518; }
+.hero p { font-size:1.2rem; margin-bottom:2rem; }
+.btn {
+  padding:0.75rem 1.5rem; background:#f5c518; color:#000;
+  border-radius:4px; text-decoration:none; font-weight:bold;
+  transition:all 0.3s ease;
+}
+.btn:hover { background:#fff; color:#000; }
+.btn-outline {
+  background:transparent; color:#fff; border:1px solid #f5c518;
+}
+.btn-outline:hover { background:#f5c518; color:#000; }
+
+/* Footer */
+footer { text-align:center; padding:2rem; font-size:0.9rem; background:#111; }
